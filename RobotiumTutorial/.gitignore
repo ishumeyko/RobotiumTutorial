@@ -18,3 +18,11 @@ local.properties
 # Eclipse project files
 .classpath
 .project
+
+# Intellij project files
+*.iml
+
+# Other files
+build.xml
+ant.properties
+proguard-project.txt

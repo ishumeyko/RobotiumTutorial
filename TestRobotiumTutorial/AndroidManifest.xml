@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="co.touchlab.test">
+    <uses-sdk android:minSdkVersion="15"/>
+
+    <!-- Here we declare the package of the Application Under Test and the Test Runner-->
+    <instrumentation
+        android:targetPackage="co.touchlab.robotiumtutorial"
+        android:name="android.test.InstrumentationTestRunner"/>
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <!-- We also need to make sure we're using the android.test.runner libarary -->
+        <uses-library android:name="android.test.runner"/>
+    </application>
+
+</manifest>

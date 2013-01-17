@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- HomeActivity Strings -->
+    <string name="app_name">RobotiumTutorial</string>
+    <string name="button_textview_test">Test TextView</string>
+    <string name="button_edittext_test">Test EditText</string>
+    <string name="button_toggle_listview_test">Test Toggle Button and List View</string>
+    <string name="button_pager_fragments_dates">Test View Pager, Fragments, Date/Time, Radio Buttons</string>
+    <string name="button_menu_wait_test">Test Menu and Wait</string>
+
+    <!-- Test TextView Strings -->
+    <string name="hello">hello</string>
+    <string name="world">world</string>
+    <string name="hello_world">Hello World!</string>
+
+    <!-- Test EditText Strings -->
+    <string name="compare_to_android">Compare Text to \"Android\"</string>
+
+    <!-- Test ToggleButton and ListView Strings -->
+    <string name="show_list">Show List</string>
+    <string name="hide_list">Hide List</string>
+
+    <!-- Test Fragments, Pager, Radio Strings -->
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+
+    <!-- Test Dialog, Menu, Wait Strings -->
+    <string name="menu_text">Show Text</string>
+    <string name="menu_images">Show Images</string>
+    <string name="menu_dialog">Show Dialog</string>
+    <string name="menu_activity">Start Activity</string>
+</resources>

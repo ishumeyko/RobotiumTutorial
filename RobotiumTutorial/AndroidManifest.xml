@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="co.touchlab.robotiumtutorial"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <!-- The following two lines should be included,
+               else some devices may cause text and button clicks to be improperly recorded -->
+
+    <!-- This is true by default for Android versions higher than 1.6 -->
+    <supports-screens android:anyDensity="true"/>
+    <!-- targetSdkVersion is suggested over minSdkVersion.
+               New versions of Android will usually require the most current version of Robotium -->
+    <uses-sdk android:targetSdkVersion="15"/>
+
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+        <activity android:name="HomeActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".TextViewActivity"/>
+        <activity android:name=".EditTextActivity"/>
+        <activity android:name=".ListViewToggleButtonActivity"/>
+        <activity android:name=".PagerFragmentsPickersRadioActivity"/>
+        <activity android:name=".DialogMenuWaitActivity"/>
+        <activity android:name=".DummyActivity"/>
+        <activity android:name=".tictacro.TicTacRoActivity"/>
+    </application>
+</manifest>
