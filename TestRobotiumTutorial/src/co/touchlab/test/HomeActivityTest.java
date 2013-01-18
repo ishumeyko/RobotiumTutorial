@@ -1,5 +1,7 @@
 package co.touchlab.test;
 
+import android.support.v4.view.ViewPager;
+import android.util.Log;
 import co.touchlab.robotiumtutorial.R;
 
 import android.view.View;
@@ -249,6 +251,9 @@ public class HomeActivityTest extends ActivityInstrumentationTestCase2<HomeActiv
         Assert.assertTrue(solo.searchText("Cupcake"));
     }
 
+    /*
+     *
+     */
     public void testPagerFragmentsPickersRadioActivity() throws Exception
     {
         //Click the button to start the DialogMenuWaitActivity
@@ -264,8 +269,8 @@ public class HomeActivityTest extends ActivityInstrumentationTestCase2<HomeActiv
          */
 
         /*
-         *  The setDatePicker has four parameters:
-         *      int index/DatePicker datePicker - indicates which date picker to modify
+         *  The setDatePicker() method has four parameters:
+         *      int index/DatePicker datePicker - indicates which DatePicker to modify
          *      int year - the year to set
          *      int monthOfYear - the month to set (January == 0 - December == 11)
          *      int dayOfMonth - the day to set ( 1 - 31 )
@@ -274,6 +279,65 @@ public class HomeActivityTest extends ActivityInstrumentationTestCase2<HomeActiv
          */
         //Set the date to March 13, 1997
         solo.setDatePicker(0, 1997, 2, 13);
+        //Ensure the date was selected correctly
+        Assert.assertTrue(solo.searchText("Mar 13"));
+
+        /*
+         * The Two methods we can use for scrolling the ViewPager horizontally are scrollToSide() and scrollViewToSide()
+         *  Scroll to side takes Solo.LEFT or Solo.RIGHT as it's only argument, depending on which way we want to scroll.
+         *  Scroll view to side takes the View to scroll as the first argument, and Solo.LEFT or Solo.RIGHT as the second
+         */
+        //Switch to the next Fragment
+        solo.scrollToSide(Solo.RIGHT);
+
+        /*
+         * There are two ways we can wait for Fragments with Robotium, the
+         *      waitForFragmentById() and waitForFragmentByTag() methods
+         *
+         * This part is in progress, not easy to set fragment id or tag dynamically
+         */
+        //Wait for the new Fragment
+        //solo.waitForFragmentById(2222);
+
+        /*
+         *  The setTimePicker() method has three parameters:
+         *      int index/TimePicker timePicker - indicates which TimePicker to modify
+         *      int hour - 24 hour clock: 0 For midnight, 1-11 for AM, 12 for noon, 13-23 For PM
+         *          - choosing an hour greater than 23 will display (selection % 12 PM)
+         *      int minute - 0-59
+         *          - choosing a minute greater than 59 will display (selection % 60) and will NOT increment the hour accordingly
+         */
+        //Set the time to 3:52 AM
+        solo.setTimePicker(0, 3, 52);
+        //Ensure time was set correctly
+        Assert.assertTrue(solo.searchText("3:52"));
+
+        //Set the time to 3:52 PM
+        solo.setTimePicker(0, 15, 52);
+        //Ensure the time was set correctly again
+        Assert.assertTrue(solo.searchText("15:52"));
+
+        //Grab a reference to the ViewPager and scroll it horizontally
+        solo.scrollViewToSide(solo.getView(ViewPager.class, 0), Solo.RIGHT);
+
+        //Wait for the new Fragment - for both waitForFragment methods, we can optionally add a timeout
+        //solo.waitForFragmentByTag("DAY_FRAGMENT", 10000);
+
+        //Click on the RadioButton for Tuesday
+        //The clickOnRadioButton() method can only be used with the index of the Button
+        solo.clickOnRadioButton(2);
+        //Ensure the TextView contains the text "Tuesday"
+        Assert.assertTrue(solo.searchText("Tuesday", 2));
+
+        //Click on the RadioButton for Thursday
+        solo.clickOnRadioButton(4);
+        //We can also use the isRadioButtonChecked() method to assert this
+        Assert.assertTrue(solo.isRadioButtonChecked(4));
+
+        //Click on the RadioButton for Saturday
+        solo.clickOnRadioButton(6);
+        //Alternatively, isRadioButtonChecked() can take the text on the button as an argument
+        Assert.assertTrue(solo.isRadioButtonChecked("Saturday"));
     }
 
     public void testDialogMenuWaitActivity() throws Exception
