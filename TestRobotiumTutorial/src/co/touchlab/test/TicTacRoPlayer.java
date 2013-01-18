@@ -5,6 +5,8 @@ import co.touchlab.robotiumtutorial.tictacro.TicTacRoActivity;
 import com.jayway.android.robotium.solo.Solo;
 import junit.framework.Assert;
 
+import java.util.Random;
+
 /**
  * Created with IntelliJ IDEA.
  * User: matthewdavis
@@ -29,6 +31,18 @@ public class TicTacRoPlayer extends ActivityInstrumentationTestCase2<TicTacRoAct
     public void testTicTacRo() throws Exception
     {
         solo.assertCurrentActivity("Wrong Activity", TicTacRoActivity.class);
-        solo.sleep(10000);
+
+        for(int i=1; i<4; i++)
+        {
+            solo.waitForText("X", i, 100000);
+
+            int moveSelection = new Random().nextInt(9);
+
+            while(!solo.searchText("O", i))
+            {
+                solo.clickLongOnView(solo.getCurrentGridViews().get(0).getChildAt(moveSelection));
+                moveSelection = (moveSelection + 1)  % 9;
+            }
+        }
     }
 }

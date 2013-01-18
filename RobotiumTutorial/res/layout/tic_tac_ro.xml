@@ -16,6 +16,7 @@
         android:layout_weight="1"
         android:background="@color/light_green"
         android:numColumns="3"
+        android:fitsSystemWindows="true"
         android:verticalSpacing="10dp"
         android:horizontalSpacing="10dp"
         android:stretchMode="columnWidth"

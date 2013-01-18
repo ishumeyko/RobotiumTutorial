@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -32,13 +33,26 @@ public class TicTacRoActivity extends Activity
 
         gameBoard = (GridView)findViewById(R.id.game_board);
         gameBoard.setAdapter(new BoardAdapter());
+
+        //Hack so that the Grid doesn't scroll
+        //todo - GridView was probably a bad decision here, it isn't really working TableLayout refactor?
+        gameBoard.setOnTouchListener(new View.OnTouchListener()
+        {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_MOVE){
+                    return true;
+                }
+                return false;
+            }
+
+        });
     }
 
     private class BoardAdapter extends BaseAdapter
     {
-        private Boolean[] boardState = { null, true, false,
-                                         false, true, true,
-                                         false, false, true };
+        private Boolean[] boardState = new Boolean[BOARDSIZE];
+        private boolean playerTurn = true;
 
         @Override
         public int getCount()
@@ -74,12 +88,38 @@ public class TicTacRoActivity extends Activity
             if(convertView == null)
             {
                 convertView = new TextView(TicTacRoActivity.this);
-                convertView.setLayoutParams(new GridView.LayoutParams((int)(viewGroup.getWidth() * .33), (int)(viewGroup.getHeight() * .33)));
+                convertView.setLayoutParams(new GridView.LayoutParams((int)(viewGroup.getWidth() * .30), (int)(viewGroup.getHeight() * .30)));
+                convertView.setBackgroundColor(R.color.dark_green);
                 ((TextView) convertView).setGravity(Gravity.CENTER);
                 ((TextView) convertView).setTextSize(28);
-                convertView.setPadding(8, 8, 8, 8);
+                //convertView.setPadding(8, 8, 8, 8);
+
+                convertView.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View v)
+                    {
+                        if(playerTurn)
+                        {
+                            boardState[(Integer)v.getTag()] = true;
+                            notifyDataSetChanged();
+                            playerTurn = false;
+                        }
+                    }
+                });
+                convertView.setOnLongClickListener(new View.OnLongClickListener()
+                {
+                    @Override
+                    public boolean onLongClick(View v)
+                    {
+                        boardState[(Integer) v.getTag()] = false;
+                        notifyDataSetChanged();
+                        return playerTurn = true;
+                    }
+                });
             }
 
+            convertView.setTag(position);
             ((TextView)convertView).setText(getItem(position).toString());
             return convertView;
         }
