@@ -7,19 +7,93 @@
     <TextView
         android:id="@+id/title_text_view"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textSize="14pt"/>
 
-    <GridView
+    <TableLayout
         android:id="@+id/game_board"
         android:layout_width="fill_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
         android:background="@color/light_green"
-        android:numColumns="3"
-        android:fitsSystemWindows="true"
-        android:verticalSpacing="10dp"
-        android:horizontalSpacing="10dp"
-        android:stretchMode="columnWidth"
-        android:gravity="center"/>
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:layout_width="fill_parent">
+
+            <co.touchlab.robotiumtutorial.tictacro.BoardTextView
+                style="@style/board_text_view_style"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"/>
+            <co.touchlab.robotiumtutorial.tictacro.BoardTextView
+                style="@style/board_text_view_style"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"/>
+            <co.touchlab.robotiumtutorial.tictacro.BoardTextView
+                style="@style/board_text_view_style"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:layout_width="fill_parent">
+
+            <co.touchlab.robotiumtutorial.tictacro.BoardTextView
+                style="@style/board_text_view_style"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"/>
+            <co.touchlab.robotiumtutorial.tictacro.BoardTextView
+                style="@style/board_text_view_style"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"/>
+            <co.touchlab.robotiumtutorial.tictacro.BoardTextView
+                style="@style/board_text_view_style"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:layout_width="fill_parent">
+
+            <co.touchlab.robotiumtutorial.tictacro.BoardTextView
+                style="@style/board_text_view_style"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"/>
+            <co.touchlab.robotiumtutorial.tictacro.BoardTextView
+                style="@style/board_text_view_style"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"/>
+            <co.touchlab.robotiumtutorial.tictacro.BoardTextView
+                style="@style/board_text_view_style"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"/>
+
+        </TableRow>
+    </TableLayout>
 
 </LinearLayout>

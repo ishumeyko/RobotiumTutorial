@@ -1,6 +1,7 @@
 package co.touchlab.test;
 
 import android.test.ActivityInstrumentationTestCase2;
+import co.touchlab.robotiumtutorial.tictacro.BoardTextView;
 import co.touchlab.robotiumtutorial.tictacro.TicTacRoActivity;
 import com.jayway.android.robotium.solo.Solo;
 import junit.framework.Assert;
@@ -32,7 +33,7 @@ public class TicTacRoPlayer extends ActivityInstrumentationTestCase2<TicTacRoAct
     {
         solo.assertCurrentActivity("Wrong Activity", TicTacRoActivity.class);
 
-        for(int i=1; i<4; i++)
+        for(int i=1; i<5; i++)
         {
             solo.waitForText("X", i, 100000);
 
@@ -40,7 +41,7 @@ public class TicTacRoPlayer extends ActivityInstrumentationTestCase2<TicTacRoAct
 
             while(!solo.searchText("O", i))
             {
-                solo.clickLongOnView(solo.getCurrentGridViews().get(0).getChildAt(moveSelection));
+                solo.clickLongOnView(solo.getView(BoardTextView.class, moveSelection));
                 moveSelection = (moveSelection + 1)  % 9;
             }
         }

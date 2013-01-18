@@ -37,4 +37,6 @@
 
     <!-- Tic Tac Ro Strings -->
     <string name="done">DONE</string>
+    <string name="player_turn">It\'s your turn</string>
+    <string name="robot_turn">The Robot Is Thinking...</string>
 </resources>
