@@ -12,11 +12,8 @@ import android.widget.*;
 import co.touchlab.robotiumtutorial.R;
 
 /**
- * Created with IntelliJ IDEA.
- * User: matthewdavis
- * Date: 1/17/13
- * Time: 4:04 PM
- * To change this template use File | Settings | File Templates.
+ * An activity that allows you to play Tic-Tac-Toe against Robotium!
+ * Clicks are for user moves, Long Clicks are for Robot moves, no cheating!
  */
 public class TicTacRoActivity extends Activity
 {

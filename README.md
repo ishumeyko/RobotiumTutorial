@@ -5,7 +5,7 @@ A simple Android Application with a suite of tests in Robotium.
 
 The tests contain my notes on the different ways the platform can be used.  It's a work in progress.
 
-The tictacro package contains an interactive game, play against the Robot! Don't let him infect your Activity! This is also a work in progress.
+The tictacro package contains an interactive game, play against the Robot! Don't let him infect your Activity! This is also a work in progress. For now all the Robot can do is (randomly) select moves.
 
 Deploy RobotiumTutorial as a standalone Application or run a TestRobotiumTutorial source file as an Android Test.
 

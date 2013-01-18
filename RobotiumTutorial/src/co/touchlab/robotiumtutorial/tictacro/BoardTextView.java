@@ -6,11 +6,7 @@ import android.widget.TextView;
 import co.touchlab.robotiumtutorial.R;
 
 /**
- * Created with IntelliJ IDEA.
- * User: matthewdavis
- * Date: 1/18/13
- * Time: 2:16 PM
- * To change this template use File | Settings | File Templates.
+ * A stub that extends TextView, used by Robotium so the TicTacRo board has unique views.
  */
 public class BoardTextView extends TextView
 {

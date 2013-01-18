@@ -8,13 +8,6 @@ import junit.framework.Assert;
 
 import java.util.Random;
 
-/**
- * Created with IntelliJ IDEA.
- * User: matthewdavis
- * Date: 1/17/13
- * Time: 4:35 PM
- * To change this template use File | Settings | File Templates.
- */
 public class TicTacRoPlayer extends ActivityInstrumentationTestCase2<TicTacRoActivity>
 {
     private Solo solo;
