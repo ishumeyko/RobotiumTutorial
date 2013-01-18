@@ -9,86 +9,16 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
 
-    <GridLayout
-        android:id="@+id/board_grid_view"
+    <GridView
+        android:id="@+id/game_board"
         android:layout_width="fill_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
-        android:columnCount="3"
-        android:rowCount="3"
-        android:stretchMode="columnWidth">
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="hello"
-            android:background="@android:color/holo_red_dark"/>
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="world"
-            android:background="@android:color/holo_blue_dark"/>
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="!"
-            android:background="@android:color/holo_green_dark"/>
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="hello"
-            android:background="@android:color/holo_red_dark"/>
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="world"
-            android:background="@android:color/holo_blue_dark"/>
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="!"
-            android:background="@android:color/holo_green_dark"/>
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="hello"
-            android:background="@android:color/holo_red_dark"/>
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="world"
-            android:background="@android:color/holo_blue_dark"/>
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:gravity="center"
-            android:text="!"
-            android:background="@android:color/holo_green_dark"/>
-
-    </GridLayout>
+        android:background="@color/light_green"
+        android:numColumns="3"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"/>
 
 </LinearLayout>

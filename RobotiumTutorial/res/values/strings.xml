@@ -34,4 +34,7 @@
     <string name="menu_images">Show Images</string>
     <string name="menu_dialog">Show Dialog</string>
     <string name="menu_activity">Start Activity</string>
+
+    <!-- Tic Tac Ro Strings -->
+    <string name="done">DONE</string>
 </resources>
