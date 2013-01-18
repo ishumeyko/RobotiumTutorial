@@ -14,7 +14,7 @@ Add the support-v4 lib to TestRobotiumTutorial's classpath, with a scope of "Pro
 
 
 
-    To setup on Mac and Windows Intellij:
+    To setup on Intellij for Mac or Windows:
 
         Import a project from existing sources from the root RobotiumTutorial folder.
 
