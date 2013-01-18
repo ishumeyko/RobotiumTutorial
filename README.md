@@ -1,4 +1,18 @@
 RobotiumTutorial
 ================
 
-A simple Android Application that shows different ways of performing actions with Robotium.
+A simple Android Application with a suite of tests in Robotium.
+
+The tests contain my notes on the different ways the platform can be used.  It's a work in progress.
+
+The tictacro package contains an interactive game, play against the Robot! Don't let him infect your Activity!
+
+Deploy RobotiumTutorial as a standalone Application or run a TestRobotiumTutorial source file as an Android Test.
+
+
+
+To install:
+Windows Intellij: Install a project from existing sources from the root RobotiumTutorial folder
+                  Choose both the RobotiumTutorial and TestRobotiumTutorial scr folders as source folders.
+                  Create an Android project, API level 15 (4.0.3) recommended.
+
