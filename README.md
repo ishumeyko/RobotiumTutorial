@@ -14,13 +14,11 @@ Add the support-v4 lib to TestRobotiumTutorial's classpath, with a scope of "Pro
 
 
 
-To install:
+    To install on Mac and Windows Intellij:
 
-Mac and Windows Intellij:
+        Install a project from existing sources from the root RobotiumTutorial folder.
 
-                Install a project from existing sources from the root RobotiumTutorial folder
+        Choose both the RobotiumTutorial and TestRobotiumTutorial scr folders as source folders.
 
-                Choose both the RobotiumTutorial and TestRobotiumTutorial scr folders as source folders.
-
-                Create an Android project, API level 15 (4.0.3) recommended.
+        Create an Android project, API level 15 (4.0.3) recommended.
 
