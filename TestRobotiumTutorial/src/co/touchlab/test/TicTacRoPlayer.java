@@ -29,5 +29,6 @@ public class TicTacRoPlayer extends ActivityInstrumentationTestCase2<TicTacRoAct
     public void testTicTacRo() throws Exception
     {
         solo.assertCurrentActivity("Wrong Activity", TicTacRoActivity.class);
+        solo.sleep(10000);
     }
 }
