@@ -394,7 +394,7 @@ public class HomeActivityTest extends ActivityInstrumentationTestCase2<HomeActiv
         } catch (Throwable e) {
             //Eat this for now... not sure of the types of things that get thrown
         }
-        getActivity().finish();
+
         super.tearDown();
     }
 }
